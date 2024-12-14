@@ -1,0 +1,12 @@
+-------------------- <Exception: void <init>()> (constprop) --------------------
+[0@L1] invokespecial %this.<java.lang.Object: void <init>()>(); {}
+[1@L1] return; {}
+
+-------------------- <Exception: void DivRemByZero()> (constprop) --------------------
+[0@L4] x = 1; {x=1}
+[1@L5] %intconst0 = 0; {%intconst0=0, x=1}
+[2@L5] y = x / %intconst0; {%intconst0=0, x=1}
+[3@L6] z = x % %intconst0; {%intconst0=0, x=1}
+[4@L6] return; {%intconst0=0, x=1}
+
+-------------------- <Exception: void FloatType()> (constprop) --------------------

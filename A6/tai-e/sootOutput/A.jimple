@@ -1,0 +1,126 @@
+class A extends java.lang.Object
+{
+    B b;
+
+    void longAP()
+    {
+        A this, a, temp$0;
+        B temp$1, temp$2, temp$4, temp$7;
+        C temp$3, temp$5, temp$8;
+        D temp$6, x;
+
+        this := @this: A;
+
+        temp$0 = new A;
+
+        specialinvoke temp$0.<A: void <init>()>();
+
+        a = temp$0;
+
+        temp$1 = new B;
+
+        specialinvoke temp$1.<B: void <init>()>();
+
+        a.<A: B b> = temp$1;
+
+        temp$2 = a.<A: B b>;
+
+        temp$3 = new C;
+
+        specialinvoke temp$3.<C: void <init>()>();
+
+        temp$2.<B: C c> = temp$3;
+
+        temp$4 = a.<A: B b>;
+
+        temp$5 = temp$4.<B: C c>;
+
+        temp$6 = new D;
+
+        specialinvoke temp$6.<D: void <init>()>();
+
+        temp$5.<C: D d> = temp$6;
+
+        temp$7 = a.<A: B b>;
+
+        temp$8 = temp$7.<B: C c>;
+
+        x = temp$8.<C: D d>;
+
+        return;
+    }
+
+    void cycle()
+    {
+        A this, a, temp$0, x, temp$2;
+        B b, temp$1, temp$3;
+
+        this := @this: A;
+
+        temp$0 = new A;
+
+        specialinvoke temp$0.<A: void <init>()>();
+
+        a = temp$0;
+
+        temp$1 = new B;
+
+        specialinvoke temp$1.<B: void <init>()>();
+
+        b = temp$1;
+
+        b.<B: A a> = a;
+
+        a.<A: B b> = b;
+
+        temp$2 = b.<B: A a>;
+
+        temp$3 = temp$2.<A: B b>;
+
+        x = temp$3.<B: A a>;
+
+        return;
+    }
+
+    void callField()
+    {
+        A this, a, temp$0;
+        B b, temp$1, temp$2;
+        C c, temp$3;
+
+        this := @this: A;
+
+        temp$0 = new A;
+
+        specialinvoke temp$0.<A: void <init>()>();
+
+        a = temp$0;
+
+        temp$1 = new B;
+
+        specialinvoke temp$1.<B: void <init>()>();
+
+        b = temp$1;
+
+        a.<A: B b> = b;
+
+        temp$2 = a.<A: B b>;
+
+        temp$3 = virtualinvoke temp$2.<B: C foo()>();
+
+        c = temp$3;
+
+        return;
+    }
+
+    void <init>()
+    {
+        A this;
+
+        this := @this: A;
+
+        specialinvoke this.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+}

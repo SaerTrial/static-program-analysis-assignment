@@ -1,0 +1,33 @@
+class Accesser extends java.lang.Object
+{
+
+    void invoke()
+    {
+        Accesser this;
+        java.lang.String receiver;
+        FieldAccess fieldAccess, temp$0;
+
+        this := @this: Accesser;
+
+        temp$0 = new FieldAccess;
+
+        specialinvoke temp$0.<FieldAccess: void <init>()>();
+
+        fieldAccess = temp$0;
+
+        receiver = fieldAccess.<FieldAccess: java.lang.String field>;
+
+        return;
+    }
+
+    void <init>()
+    {
+        Accesser this;
+
+        this := @this: Accesser;
+
+        specialinvoke this.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+}

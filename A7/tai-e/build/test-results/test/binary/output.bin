@@ -1,0 +1,35 @@
+Tai-e starts ...
+&Writing options to output/options.yml
+/Writing analysis plan to output/tai-e-plan.yml
+WorldBuilder starts ...
+-9986 classes with 98546 methods in the world
++WorldBuilder finishes, elapsed time: 2.09s
+throw starts ...
++3 classes in scope (app) of class analyses
+,6 methods in scope (app) of method analyses
+$throw finishes, elapsed time: 0.02s
+cfg starts ...
+"cfg finishes, elapsed time: 0.00s
+cspta starts ...
+;-------------- Pointer analysis statistics: --------------
+6#var pointers:                22 (insens) / 31 (sens)
+6#var points-to:               28 (insens) / 28 (sens)
+'#static field points-to:      0 (sens)
+'#instance field points-to:    2 (sens)
+'#array points-to:             0 (sens)
+5#reachable methods:           6 (insens) / 13 (sens)
+6#call graph edges:            10 (insens) / 12 (sens)
+)----------------------------------------
+$cspta finishes, elapsed time: 0.04s
+cg starts ...
+!cg finishes, elapsed time: 0.00s
+icfg starts ...
+4CFG of <java.lang.Object: void <init>()> is missing
+4CFG of <java.lang.Object: void <init>()> is missing
+fCFG of <java.lang.Object: void <init>()> is absent, try to fix this by adding option -scope=reachable
+#icfg finishes, elapsed time: 0.00s
+inter-constprop starts ...
+.inter-constprop finishes, elapsed time: 0.00s
+process-result starts ...
+-process-result finishes, elapsed time: 0.01s
+$Tai-e finishes, elapsed time: 2.25s

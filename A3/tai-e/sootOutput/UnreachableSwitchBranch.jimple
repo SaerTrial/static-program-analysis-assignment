@@ -1,0 +1,436 @@
+class UnreachableSwitchBranch extends java.lang.Object
+{
+
+    void lookupSwitch()
+    {
+        int x, y, temp$0;
+        UnreachableSwitchBranch this;
+
+        this := @this: UnreachableSwitchBranch;
+
+        x = 1;
+
+        temp$0 = x << 3;
+
+        y = temp$0;
+
+        goto label5;
+
+     label1:
+        nop;
+
+        virtualinvoke this.<UnreachableSwitchBranch: void use(int)>(2);
+
+        goto label6;
+
+     label2:
+        nop;
+
+        virtualinvoke this.<UnreachableSwitchBranch: void use(int)>(4);
+
+        goto label6;
+
+     label3:
+        nop;
+
+        virtualinvoke this.<UnreachableSwitchBranch: void use(int)>(8);
+
+        goto label6;
+
+     label4:
+        nop;
+
+        virtualinvoke this.<UnreachableSwitchBranch: void use(int)>(666);
+
+        goto label6;
+
+        goto label6;
+
+     label5:
+        nop;
+
+        nop;
+
+        lookupswitch(y)
+        {
+            case 2: goto label1;
+            case 4: goto label2;
+            case 8: goto label3;
+            default: goto label4;
+        };
+
+     label6:
+        nop;
+
+        return;
+    }
+
+    void lookupNestedSwitch()
+    {
+        int x, y, temp$0;
+        UnreachableSwitchBranch this;
+
+        this := @this: UnreachableSwitchBranch;
+
+        x = 1;
+
+        temp$0 = x << 3;
+
+        y = temp$0;
+
+        goto label10;
+
+     label01:
+        nop;
+
+        virtualinvoke this.<UnreachableSwitchBranch: void use(int)>(2);
+
+        goto label11;
+
+     label02:
+        nop;
+
+        goto label06;
+
+     label03:
+        nop;
+
+        virtualinvoke this.<UnreachableSwitchBranch: void use(int)>(1);
+
+        goto label07;
+
+     label04:
+        nop;
+
+        virtualinvoke this.<UnreachableSwitchBranch: void use(int)>(2);
+
+        goto label07;
+
+     label05:
+        nop;
+
+        virtualinvoke this.<UnreachableSwitchBranch: void use(int)>(6);
+
+        goto label07;
+
+        goto label07;
+
+     label06:
+        nop;
+
+        nop;
+
+        tableswitch(x)
+        {
+            case 1: goto label03;
+            case 2: goto label04;
+            default: goto label05;
+        };
+
+     label07:
+        nop;
+
+        virtualinvoke this.<UnreachableSwitchBranch: void use(int)>(4);
+
+        goto label11;
+
+     label08:
+        nop;
+
+        virtualinvoke this.<UnreachableSwitchBranch: void use(int)>(8);
+
+        goto label11;
+
+     label09:
+        nop;
+
+        virtualinvoke this.<UnreachableSwitchBranch: void use(int)>(666);
+
+        goto label11;
+
+        goto label11;
+
+     label10:
+        nop;
+
+        nop;
+
+        lookupswitch(y)
+        {
+            case 2: goto label01;
+            case 4: goto label02;
+            case 8: goto label08;
+            default: goto label09;
+        };
+
+     label11:
+        nop;
+
+        return;
+    }
+
+    void lookupNestedIfSwitch()
+    {
+        int x, y, temp$0;
+        UnreachableSwitchBranch this;
+
+        this := @this: UnreachableSwitchBranch;
+
+        x = 1;
+
+        temp$0 = x << 3;
+
+        y = temp$0;
+
+        goto label8;
+
+     label1:
+        nop;
+
+        virtualinvoke this.<UnreachableSwitchBranch: void use(int)>(2);
+
+        goto label9;
+
+     label2:
+        nop;
+
+        if x == 1 goto label3;
+
+        goto label4;
+
+     label3:
+        nop;
+
+        virtualinvoke this.<UnreachableSwitchBranch: void use(int)>(1);
+
+        goto label5;
+
+     label4:
+        nop;
+
+        virtualinvoke this.<UnreachableSwitchBranch: void use(int)>(6);
+
+     label5:
+        nop;
+
+        goto label9;
+
+     label6:
+        nop;
+
+        virtualinvoke this.<UnreachableSwitchBranch: void use(int)>(8);
+
+        goto label9;
+
+     label7:
+        nop;
+
+        virtualinvoke this.<UnreachableSwitchBranch: void use(int)>(666);
+
+        goto label9;
+
+        goto label9;
+
+     label8:
+        nop;
+
+        nop;
+
+        lookupswitch(y)
+        {
+            case 2: goto label1;
+            case 4: goto label2;
+            case 8: goto label6;
+            default: goto label7;
+        };
+
+     label9:
+        nop;
+
+        return;
+    }
+
+    int cal(int, int)
+    {
+        int x, y, temp$0;
+        UnreachableSwitchBranch this;
+
+        this := @this: UnreachableSwitchBranch;
+
+        x := @parameter0: int;
+
+        y := @parameter1: int;
+
+        temp$0 = x * y;
+
+        return temp$0;
+    }
+
+    void lookupNoBreakSwitch()
+    {
+        int x, y, temp$0;
+        UnreachableSwitchBranch this;
+
+        this := @this: UnreachableSwitchBranch;
+
+        x = 1;
+
+        temp$0 = x << 3;
+
+        y = temp$0;
+
+        goto label5;
+
+     label1:
+        nop;
+
+        virtualinvoke this.<UnreachableSwitchBranch: void use(int)>(2);
+
+        goto label6;
+
+     label2:
+        nop;
+
+        virtualinvoke this.<UnreachableSwitchBranch: void use(int)>(4);
+
+        goto label6;
+
+     label3:
+        nop;
+
+        virtualinvoke this.<UnreachableSwitchBranch: void use(int)>(8);
+
+     label4:
+        nop;
+
+        virtualinvoke this.<UnreachableSwitchBranch: void use(int)>(666);
+
+        goto label6;
+
+        goto label6;
+
+     label5:
+        nop;
+
+        nop;
+
+        lookupswitch(y)
+        {
+            case 2: goto label1;
+            case 4: goto label2;
+            case 8: goto label3;
+            default: goto label4;
+        };
+
+     label6:
+        nop;
+
+        return;
+    }
+
+    void lookupSideEffectSwitch()
+    {
+        UnreachableSwitchBranch this;
+        int[] intArray, temp$1, temp$2;
+        int x, y, temp$0, temp$3, temp$4;
+
+        this := @this: UnreachableSwitchBranch;
+
+        x = 1;
+
+        temp$0 = x << 3;
+
+        y = temp$0;
+
+        temp$1 = newarray (int)[3];
+
+        temp$1[0] = 1;
+
+        temp$1[1] = 2;
+
+        temp$1[2] = 3;
+
+        intArray = temp$1;
+
+        goto label5;
+
+     label1:
+        nop;
+
+        virtualinvoke this.<UnreachableSwitchBranch: void use(int)>(2);
+
+        goto label6;
+
+     label2:
+        nop;
+
+        virtualinvoke this.<UnreachableSwitchBranch: void use(int)>(4);
+
+        goto label6;
+
+     label3:
+        nop;
+
+        temp$2 = intArray;
+
+        temp$3 = 0;
+
+        temp$4 = temp$2[temp$3];
+
+        x = temp$4;
+
+        virtualinvoke this.<UnreachableSwitchBranch: void use(int)>(8);
+
+        goto label6;
+
+     label4:
+        nop;
+
+        virtualinvoke this.<UnreachableSwitchBranch: void use(int)>(666);
+
+        goto label6;
+
+        goto label6;
+
+     label5:
+        nop;
+
+        nop;
+
+        lookupswitch(y)
+        {
+            case 2: goto label1;
+            case 4: goto label2;
+            case 8: goto label3;
+            default: goto label4;
+        };
+
+     label6:
+        nop;
+
+        return;
+    }
+
+    void use(int)
+    {
+        int x;
+        UnreachableSwitchBranch this;
+
+        this := @this: UnreachableSwitchBranch;
+
+        x := @parameter0: int;
+
+        return;
+    }
+
+    void <init>()
+    {
+        UnreachableSwitchBranch this;
+
+        this := @this: UnreachableSwitchBranch;
+
+        specialinvoke this.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+}

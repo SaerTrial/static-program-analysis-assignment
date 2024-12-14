@@ -1,0 +1,6 @@
+-------------------- <FieldAccess: void <init>()> (constprop) --------------------
+[0@L1] invokespecial %this.<java.lang.Object: void <init>()>(); {}
+[1@L1] return; {}
+
+-------------------- <FieldAccess: void complicated(int, float, ClassA)> (constprop) --------------------
+[1@L20] z.<ClassA: int field> = temp$0; {temp$0=123, x=NAC}

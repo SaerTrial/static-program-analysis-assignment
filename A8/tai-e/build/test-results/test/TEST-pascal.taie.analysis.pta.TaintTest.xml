@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="pascal.taie.analysis.pta.TaintTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-12-12T03:25:23" hostname="Zhanpengs-MacBook-Air-4.local" time="2.796">
+  <properties/>
+  <testcase name="testInterTaintTransfer" classname="pascal.taie.analysis.pta.TaintTest" time="2.796"/>
+  <system-out><![CDATA[Tai-e starts ...
+Writing options to output/options.yml
+Writing analysis plan to output/tai-e-plan.yml
+WorldBuilder starts ...
+9985 classes with 98549 methods in the world
+WorldBuilder finishes, elapsed time: 2.33s
+class-dumper starts ...
+Dumping 2 classes to output ...
+class-dumper finishes, elapsed time: 0.02s
+cspta starts ...
+TaintConfig:
+sources:
+  <SourceSink: java.lang.String source()>(java.lang.String)
+  <SourceSink: java.lang.String sourceAndSink(java.lang.String,java.lang.String)>(java.lang.String)
+
+sinks:
+  <SourceSink: void sink(java.lang.String)>/0
+  <SourceSink: void sink(java.lang.String,int)>/0
+  <SourceSink: void sink(java.lang.String,java.lang.String)>/1
+  <SourceSink: java.lang.String sourceAndSink(java.lang.String,java.lang.String)>/0
+
+transfers:
+  <java.lang.String: java.lang.String concat(java.lang.String)>: base -> result(java.lang.String)
+  <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>: 0 -> base(java.lang.StringBuffer)
+  <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>: 0 -> base(java.lang.StringBuilder)
+  <java.lang.String: void <init>(char[])>: 0 -> base(java.lang.String)
+  <java.lang.StringBuffer: java.lang.String toString()>: base -> result(java.lang.String)
+  <java.lang.StringBuilder: java.lang.String toString()>: base -> result(java.lang.String)
+  <java.lang.String: char[] toCharArray()>: base -> result(char[])
+  <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>: 0 -> base(java.lang.StringBuilder)
+  <java.lang.String: java.lang.String concat(java.lang.String)>: 0 -> result(java.lang.String)
+  <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>: 0 -> base(java.lang.StringBuffer)
+
+-------------- Pointer analysis statistics: --------------
+#var pointers:                524 (insens) / 1668 (sens)
+#var points-to:               568 (insens) / 1730 (sens)
+#static field points-to:      0 (sens)
+#instance field points-to:    282 (sens)
+#array points-to:             0 (sens)
+#reachable methods:           91 (insens) / 329 (sens)
+#call graph edges:            195 (insens) / 590 (sens)
+----------------------------------------
+Comparing taint flows with src/test/resources/pta/taint/InterTaintTransfer-cspta-expected.txt ...
+cspta finishes, elapsed time: 0.18s
+Tai-e finishes, elapsed time: 2.61s
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,33 @@
+Tai-e starts ...
+&Writing options to output/options.yml
+/Writing analysis plan to output/tai-e-plan.yml
+WorldBuilder starts ...
+-9985 classes with 98549 methods in the world
++WorldBuilder finishes, elapsed time: 2.32s
+class-dumper starts ...
+ Dumping 2 classes to output ...
++class-dumper finishes, elapsed time: 0.03s
+cspta starts ...
+TaintConfig:
+	sources:
+<  <SourceSink: java.lang.String source()>(java.lang.String)
+d  <SourceSink: java.lang.String sourceAndSink(java.lang.String,java.lang.String)>(java.lang.String)
+
+sinks:
+.  <SourceSink: void sink(java.lang.String)>/0
+2  <SourceSink: void sink(java.lang.String,int)>/0
+?  <SourceSink: void sink(java.lang.String,java.lang.String)>/1
+T  <SourceSink: java.lang.String sourceAndSink(java.lang.String,java.lang.String)>/0
+
+transfers:
+r  <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>: 0 -> base(java.lang.StringBuilder)
+G  <java.lang.String: void <init>(char[])>: 0 -> base(java.lang.String)
+r  <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>: 0 -> base(java.lang.StringBuilder)
+Z  <java.lang.StringBuffer: java.lang.String toString()>: base -> result(java.lang.String)
+o  <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>: 0 -> base(java.lang.StringBuffer)
+C  <java.lang.String: char[] toCharArray()>: base -> result(char[])
+[  <java.lang.StringBuilder: java.lang.String toString()>: base -> result(java.lang.String)
+b  <java.lang.String: java.lang.String concat(java.lang.String)>: base -> result(java.lang.String)
+_  <java.lang.String: java.lang.String concat(java.lang.String)>: 0 -> result(java.lang.String)
+o  <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>: 0 -> base(java.lang.StringBuffer)
+

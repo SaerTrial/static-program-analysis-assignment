@@ -1,0 +1,60 @@
+public class FieldAccess extends java.lang.Object
+{
+    public int field;
+
+    void invoke()
+    {
+        int i, temp$1;
+        FieldAccess this;
+        ClassA a, temp$0;
+
+        this := @this: FieldAccess;
+
+        i = 2;
+
+        temp$0 = new ClassA;
+
+        specialinvoke temp$0.<ClassA: void <init>(int)>(1);
+
+        a = temp$0;
+
+        temp$1 = 2;
+
+        a.<ClassA: int field> = temp$1;
+
+        return;
+    }
+
+    void complicated(int, float, ClassA)
+    {
+        int x, temp$0;
+        float y;
+        FieldAccess this;
+        ClassA z;
+
+        this := @this: FieldAccess;
+
+        x := @parameter0: int;
+
+        y := @parameter1: float;
+
+        z := @parameter2: ClassA;
+
+        temp$0 = 123;
+
+        z.<ClassA: int field> = temp$0;
+
+        return;
+    }
+
+    public void <init>()
+    {
+        FieldAccess this;
+
+        this := @this: FieldAccess;
+
+        specialinvoke this.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+}

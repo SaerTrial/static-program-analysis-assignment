@@ -1,0 +1,26 @@
+class Three extends One
+{
+
+    public int get()
+    {
+        int temp$0;
+        Three this;
+
+        this := @this: Three;
+
+        temp$0 = 4444;
+
+        return temp$0;
+    }
+
+    void <init>()
+    {
+        Three this;
+
+        this := @this: Three;
+
+        specialinvoke this.<One: void <init>()>();
+
+        return;
+    }
+}

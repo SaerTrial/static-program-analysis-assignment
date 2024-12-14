@@ -1,0 +1,31 @@
+digraph G {
+  node [color=".3 .2 1.0",style=filled,shape=box,];
+  "0" [label="<A: void cycle()>",];
+  "1" [label="<A: void longAP()>",];
+  "2" [label="<D: void <init>()>",];
+  "3" [label="<A: void callField()>",];
+  "4" [label="<B: void <init>()>",];
+  "5" [label="<C: void <init>()>",];
+  "6" [label="<java.lang.Object: void <init>()>",];
+  "7" [label="<InstanceField: void main(java.lang.String[])>",];
+  "8" [label="<B: C foo()>",];
+  "9" [label="<A: void <init>()>",];
+  "0" -> "9" [label="[1@L23] invokespecial temp$0.<A: void <init>()>();",];
+  "0" -> "4" [label="[4@L24] invokespecial temp$1.<B: void <init>()>();",];
+  "1" -> "9" [label="[1@L15] invokespecial temp$0.<A: void <init>()>();",];
+  "1" -> "5" [label="[8@L17] invokespecial temp$3.<C: void <init>()>();",];
+  "1" -> "4" [label="[4@L16] invokespecial temp$1.<B: void <init>()>();",];
+  "1" -> "2" [label="[13@L18] invokespecial temp$6.<D: void <init>()>();",];
+  "2" -> "6" [label="[0@L52] invokespecial %this.<java.lang.Object: void <init>()>();",];
+  "3" -> "4" [label="[4@L32] invokespecial temp$1.<B: void <init>()>();",];
+  "3" -> "9" [label="[1@L31] invokespecial temp$0.<A: void <init>()>();",];
+  "3" -> "8" [label="[8@L34] temp$3 = invokevirtual temp$2.<B: C foo()>();",];
+  "4" -> "6" [label="[0@L38] invokespecial %this.<java.lang.Object: void <init>()>();",];
+  "5" -> "6" [label="[0@L48] invokespecial %this.<java.lang.Object: void <init>()>();",];
+  "7" -> "0" [label="[4@L6] invokevirtual a.<A: void cycle()>();",];
+  "7" -> "1" [label="[3@L5] invokevirtual a.<A: void longAP()>();",];
+  "7" -> "3" [label="[5@L7] invokevirtual a.<A: void callField()>();",];
+  "7" -> "9" [label="[1@L4] invokespecial temp$0.<A: void <init>()>();",];
+  "8" -> "5" [label="[1@L43] invokespecial temp$0.<C: void <init>()>();",];
+  "9" -> "6" [label="[0@L11] invokespecial %this.<java.lang.Object: void <init>()>();",];
+}

@@ -1,0 +1,55 @@
+class DeadAssignment extends java.lang.Object
+{
+
+    void deadArray()
+    {
+        int[] intArray, temp$0, temp$1;
+        int temp$2, temp$3;
+        DeadAssignment this;
+
+        this := @this: DeadAssignment;
+
+        temp$0 = newarray (int)[3];
+
+        temp$0[0] = 1;
+
+        temp$0[1] = 2;
+
+        temp$0[2] = 3;
+
+        intArray = temp$0;
+
+        temp$1 = intArray;
+
+        temp$2 = 0;
+
+        temp$3 = 4;
+
+        temp$1[temp$2] = temp$3;
+
+        return;
+    }
+
+    void use(int)
+    {
+        int n;
+        DeadAssignment this;
+
+        this := @this: DeadAssignment;
+
+        n := @parameter0: int;
+
+        return;
+    }
+
+    void <init>()
+    {
+        DeadAssignment this;
+
+        this := @this: DeadAssignment;
+
+        specialinvoke this.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+}

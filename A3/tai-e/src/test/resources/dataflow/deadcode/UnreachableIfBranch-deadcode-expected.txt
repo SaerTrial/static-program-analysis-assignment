@@ -1,0 +1,54 @@
+-------------------- <UnreachableIfBranch: void <init>()> (deadcode) --------------------
+
+-------------------- <UnreachableIfBranch: int branch()> (deadcode) --------------------
+[3@L7] goto 7;
+[7@L7] nop;
+[8@L10] z = 200;
+
+-------------------- <UnreachableIfBranch: int branch2()> (deadcode) --------------------
+[4@L19] nop;
+[5@L20] z = 100;
+[6@L19] goto 9;
+
+-------------------- <UnreachableIfBranch: void nestedIfBranch()> (deadcode) --------------------
+[5@L32] nop;
+[7@L34] goto 11;
+[11@L34] nop;
+[12@L37] z = 4;
+[8@L34] nop;
+[9@L35] z = 3;
+[10@L34] goto 13;
+[6@L34] if (x > z) goto 8;
+[13@L37] nop;
+[15@L32] goto 18;
+[14@L38] x = 11;
+
+-------------------- <UnreachableIfBranch: void nestedWhileBranch()> (deadcode) --------------------
+[7@L50] if (x > z) goto 9;
+[10@L51] k = 9;
+[13@L48] goto 16;
+[8@L50] goto 12;
+[5@L48] nop;
+[11@L50] goto 6;
+[6@L48] nop;
+[12@L50] nop;
+[9@L50] nop;
+
+-------------------- <UnreachableIfBranch: void heavyNestedBranch()> (deadcode) --------------------
+[13@L65] z = 2;
+[21@L62] goto 24;
+[10@L65] if (k > z) goto 12;
+[17@L66] nop;
+[9@L64] nop;
+[16@L66] z = 3;
+[6@L62] nop;
+[8@L64] goto 20;
+[5@L62] nop;
+[12@L65] nop;
+[7@L64] if (x > z) goto 9;
+[11@L65] goto 15;
+[15@L65] nop;
+[14@L65] goto 17;
+[19@L64] goto 6;
+[18@L67] k = 9;
+[20@L64] nop;

@@ -1,0 +1,121 @@
+-------------------- <UnreachableSwitchBranch: void <init>()> (deadcode) --------------------
+
+-------------------- <UnreachableSwitchBranch: void lookupSwitch()> (deadcode) --------------------
+[4@L6] nop;
+[5@L8] %intconst1 = 2;
+[6@L8] invokevirtual %this.<UnreachableSwitchBranch: void use(int)>(%intconst1);
+[7@L9] goto 24;
+
+[8@L9] nop;
+[9@L11] %intconst2 = 4;
+[10@L11] invokevirtual %this.<UnreachableSwitchBranch: void use(int)>(%intconst2);
+[11@L12] goto 24;
+
+[16@L15] nop;
+[17@L17] %intconst4 = 666;
+[18@L17] invokevirtual %this.<UnreachableSwitchBranch: void use(int)>(%intconst4);
+[19@L18] goto 24;
+
+[20@L6] goto 24;
+
+-------------------- <UnreachableSwitchBranch: void lookupNestedSwitch()> (deadcode) --------------------
+[4@L25] nop;
+[5@L27] %intconst1 = 2;
+[6@L27] invokevirtual %this.<UnreachableSwitchBranch: void use(int)>(%intconst1);
+[7@L28] goto 41;
+
+[25@L30] nop;
+[26@L41] %intconst4 = 4;
+[27@L41] invokevirtual %this.<UnreachableSwitchBranch: void use(int)>(%intconst4);
+[28@L42] goto 41;
+
+[33@L45] nop;
+[34@L47] %intconst6 = 666;
+[35@L47] invokevirtual %this.<UnreachableSwitchBranch: void use(int)>(%intconst6);
+[36@L48] goto 41;
+[37@L25] goto 41;
+
+[24@L30] tableswitch (x) {1->10, 2->14, default->17};
+[10@L30] nop;
+[11@L32] %intconst2 = 1;
+[12@L32] invokevirtual %this.<UnreachableSwitchBranch: void use(int)>(%intconst2);
+[13@L33] goto 25;
+
+[14@L33] nop;
+[15@L35] invokevirtual %this.<UnreachableSwitchBranch: void use(int)>(%intconst1);
+[16@L36] goto 25;
+
+[17@L36] nop;
+[18@L38] %intconst3 = 6;
+[19@L38] invokevirtual %this.<UnreachableSwitchBranch: void use(int)>(%intconst3);
+[20@L39] goto 25;
+[21@L30] goto 25;
+
+[8@L28] nop;
+[9@L30] goto 22;
+[22@L30] nop;
+[23@L30] nop;
+
+
+-------------------- <UnreachableSwitchBranch: void lookupNestedIfSwitch()> (deadcode) --------------------
+[4@L56] nop;
+[5@L58] %intconst1 = 2;
+[6@L58] invokevirtual %this.<UnreachableSwitchBranch: void use(int)>(%intconst1);
+[7@L59] goto 32;
+
+[8@L59] nop;
+[9@L61] %intconst2 = 1;
+[10@L61] if (x == %intconst2) goto 12;
+[11@L61] goto 15;
+
+[12@L61] nop;
+[13@L61] invokevirtual %this.<UnreachableSwitchBranch: void use(int)>(%intconst2);
+[14@L61] goto 18;
+
+[15@L61] nop;
+[16@L62] %intconst3 = 6;
+[17@L62] invokevirtual %this.<UnreachableSwitchBranch: void use(int)>(%intconst3);
+[18@L62] nop;
+[19@L63] goto 32;
+
+[24@L66] nop;
+[25@L68] %intconst5 = 666;
+[26@L68] invokevirtual %this.<UnreachableSwitchBranch: void use(int)>(%intconst5);
+[27@L69] goto 32;
+[28@L56] goto 32;
+
+
+-------------------- <UnreachableSwitchBranch: void lookupNoBreakSwitch()> (deadcode) --------------------
+[19@L98] goto 23;
+[8@L101] nop;
+[9@L103] %intconst2 = 4;
+[10@L103] invokevirtual %this.<UnreachableSwitchBranch: void use(int)>(%intconst2);
+[11@L104] goto 23;
+[4@L98] nop;
+[5@L100] %intconst1 = 2;
+[6@L100] invokevirtual %this.<UnreachableSwitchBranch: void use(int)>(%intconst1);
+[7@L101] goto 23;
+
+
+
+-------------------- <UnreachableSwitchBranch: void lookupSideEffectSwitch()> (deadcode) --------------------
+[12@L136] nop;
+[13@L138] invokevirtual %this.<UnreachableSwitchBranch: void use(int)>(%intconst3);
+[14@L139] goto 34;
+
+[15@L139] nop;
+[16@L141] %intconst4 = 4;
+[17@L141] invokevirtual %this.<UnreachableSwitchBranch: void use(int)>(%intconst4);
+[18@L142] goto 34;
+
+
+[26@L146] nop;
+[27@L148] %intconst6 = 666;
+[28@L148] invokevirtual %this.<UnreachableSwitchBranch: void use(int)>(%intconst6);
+[29@L149] goto 34;
+
+[30@L136] goto 34;
+
+[22@L144] x = temp$4;
+
+-------------------- <UnreachableSwitchBranch: void use(int)> (deadcode) --------------------

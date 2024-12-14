@@ -1,0 +1,70 @@
+class A extends java.lang.Object {
+
+    B b;
+
+    void longAP() {
+        A temp$0, a;
+        B temp$1, temp$2, temp$4, temp$7;
+        C temp$3, temp$5, temp$8;
+        D temp$6, x;
+        [0@L15] temp$0 = new A;
+        [1@L15] invokespecial temp$0.<A: void <init>()>();
+        [2@L15] a = temp$0;
+        [3@L16] temp$1 = new B;
+        [4@L16] invokespecial temp$1.<B: void <init>()>();
+        [5@L16] a.<A: B b> = temp$1;
+        [6@L17] temp$2 = a.<A: B b>;
+        [7@L17] temp$3 = new C;
+        [8@L17] invokespecial temp$3.<C: void <init>()>();
+        [9@L17] temp$2.<B: C c> = temp$3;
+        [10@L18] temp$4 = a.<A: B b>;
+        [11@L18] temp$5 = temp$4.<B: C c>;
+        [12@L18] temp$6 = new D;
+        [13@L18] invokespecial temp$6.<D: void <init>()>();
+        [14@L18] temp$5.<C: D d> = temp$6;
+        [15@L19] temp$7 = a.<A: B b>;
+        [16@L19] temp$8 = temp$7.<B: C c>;
+        [17@L19] x = temp$8.<C: D d>;
+        [18@L19] return;
+    }
+
+    void cycle() {
+        A temp$0, a, temp$2, x;
+        B temp$1, b, temp$3;
+        [0@L23] temp$0 = new A;
+        [1@L23] invokespecial temp$0.<A: void <init>()>();
+        [2@L23] a = temp$0;
+        [3@L24] temp$1 = new B;
+        [4@L24] invokespecial temp$1.<B: void <init>()>();
+        [5@L24] b = temp$1;
+        [6@L25] b.<B: A a> = a;
+        [7@L26] a.<A: B b> = b;
+        [8@L27] temp$2 = b.<B: A a>;
+        [9@L27] temp$3 = temp$2.<A: B b>;
+        [10@L27] x = temp$3.<B: A a>;
+        [11@L27] return;
+    }
+
+    void callField() {
+        A temp$0, a;
+        B temp$1, b, temp$2;
+        C temp$3, c;
+        [0@L31] temp$0 = new A;
+        [1@L31] invokespecial temp$0.<A: void <init>()>();
+        [2@L31] a = temp$0;
+        [3@L32] temp$1 = new B;
+        [4@L32] invokespecial temp$1.<B: void <init>()>();
+        [5@L32] b = temp$1;
+        [6@L33] a.<A: B b> = b;
+        [7@L34] temp$2 = a.<A: B b>;
+        [8@L34] temp$3 = invokevirtual temp$2.<B: C foo()>();
+        [9@L34] c = temp$3;
+        [10@L34] return;
+    }
+
+    void <init>() {
+        [0@L11] invokespecial %this.<java.lang.Object: void <init>()>();
+        [1@L11] return;
+    }
+
+}

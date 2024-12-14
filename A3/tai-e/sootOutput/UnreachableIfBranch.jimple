@@ -1,0 +1,98 @@
+class UnreachableIfBranch extends java.lang.Object
+{
+
+    void heavyNestedBranch()
+    {
+        UnreachableIfBranch this;
+        int x, k, z, temp$0, temp$1, temp$2;
+
+        this := @this: UnreachableIfBranch;
+
+        x = 10;
+
+        k = 1;
+
+        z = 2;
+
+        if k > x goto label1;
+
+        goto label8;
+
+     label1:
+        nop;
+
+     label2:
+        nop;
+
+        if x > z goto label3;
+
+        goto label7;
+
+     label3:
+        nop;
+
+        if k > z goto label4;
+
+        goto label5;
+
+     label4:
+        nop;
+
+        temp$0 = 2;
+
+        z = temp$0;
+
+        goto label6;
+
+     label5:
+        nop;
+
+        temp$1 = 3;
+
+        z = temp$1;
+
+     label6:
+        nop;
+
+        temp$2 = 9;
+
+        k = temp$2;
+
+        goto label2;
+
+     label7:
+        nop;
+
+        goto label9;
+
+     label8:
+        nop;
+
+        virtualinvoke this.<UnreachableIfBranch: void use()>();
+
+     label9:
+        nop;
+
+        return;
+    }
+
+    void use()
+    {
+        UnreachableIfBranch this;
+
+        this := @this: UnreachableIfBranch;
+
+        return;
+    }
+
+    void <init>()
+    {
+        UnreachableIfBranch this;
+
+        this := @this: UnreachableIfBranch;
+
+        specialinvoke this.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+}

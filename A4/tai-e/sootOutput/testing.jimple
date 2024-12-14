@@ -1,0 +1,5 @@
+interface  testing extends java.lang.Object
+{
+
+    public abstract int tess();
+}
